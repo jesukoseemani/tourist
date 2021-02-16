@@ -1,0 +1,477 @@
+/*global styling*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+section {
+  padding: 0 1.5rem;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  color: #fafafa;
+}
+.container {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fafafa;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/*header style*/
+header {
+  margin: 1rem;
+  height: 7rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding: 0 1.3rem;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 1rem;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 25rem;
+  background-color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -26rem;
+  top: 0;
+  z-index: 1000;
+}
+.nav-bar.active {
+  right: 0;
+}
+
+.list-items {
+  margin: 2rem;
+}
+
+ul li a {
+  font-size: 2rem;
+  font-family: "Aldrich", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.close-bar {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+ion-icon {
+  color: #eb648c;
+  font-size: 3.5rem;
+}
+#list {
+  color: white;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url(header-bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.adventure {
+  width: 100%;
+  max-width: 50rem;
+  /*padding: 40vh 2rem;*/
+  transform: translateY(30%);
+  text-align: left;
+}
+
+.outdoors {
+  font-size: 2rem;
+}
+
+.ads {
+  font-size: 4rem;
+  font-family: "Aldrich", sans-serif;
+  margin: 0.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid gray;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  border-radius: 5rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 600ms ease;
+}
+
+.btn:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.btn-primary {
+  background-color: #eb648c;
+  margin: 2rem 0;
+}
+
+.btn-primary:hover {
+  background-color: #f11456;
+}
+
+.btn-primary a {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bolder;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4.7rem;
+  bottom: -4px;
+  left: 0;
+  background: url(wave-small.png) center no-repeat;
+  background-size: cover;
+}
+
+.classroom {
+  width: 100%;
+  position: relative;
+}
+
+.experience {
+  margin: 3rem 0;
+  text-align: center;
+}
+.experience h3 {
+  color: black;
+  font-size: 1.65rem;
+}
+.experience h1 {
+  color: black;
+  margin-bottom: 1.5rem;
+  font-family: "Aldrich", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.experience p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.ex {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.ex::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    )
+    center no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.ex h1 {
+  margin-bottom: 2rem;
+  font-family: "Aldrich", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ex p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.star-gazing {
+  background: url(stars.jpg) center no-repeat;
+}
+.hiking {
+  background: url(hiking.jpg) center no-repeat;
+}
+.camping {
+  background: url(camping.jpg) center no-repeat;
+}
+.description {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url(testimonials-bg.jpg) center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.description::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4.7rem;
+  top: -4px;
+  left: 0;
+  background: url(wave-small-reversed.png) center no-repeat;
+  background-size: cover;
+}
+
+.comment {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.customer img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  border: 3px solid #eb648c;
+  margin: 3rem 0 0 0;
+}
+
+.customer p {
+  text-transform: uppercase;
+  font-family: "Aldrich", sans-serif;
+  font-weight: bold;
+}
+
+.begin-head {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.begin-head h3 {
+  color: black;
+  font-size: 1.65rem;
+}
+.begin-head h1 {
+  color: black;
+  margin-bottom: 1.5rem;
+  font-family: "Aldrich", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.begin-head p {
+  color: #eb648c;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.grid-begin {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.paragraph-1 p {
+  color: rgba(0, 0, 0, 0.7);
+}
+footer {
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 0%,
+      rgba(72, 56, 149, 0.8) 100%
+    ),
+    url(camping.jpg) center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 1rem;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 350px) {
+  .hero {
+    height: 100vh;
+  }
+  .adventure {
+    transform: translateY(50%);
+  }
+}
+
+@media screen and (min-width: 470px) {
+  .hero::before {
+    width: 100%;
+    height: 9.4rem;
+    background: url(wave-medium.png) center no-repeat;
+    background-size: cover;
+  }
+  .description::before {
+    width: 100%;
+    height: 9.4rem;
+    background: url(wave-medium-reversed.png) center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .adventure {
+    transform: translateY(70%);
+  }
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    height: initial;
+    width: initial;
+    background-color: initial;
+    justify-content: initial;
+    align-items: initial;
+    position: initial;
+    right: initial;
+    top: initial;
+    z-index: initial;
+  }
+
+  ion-icon {
+    display: none;
+  }
+  header {
+    height: 8px;
+  }
+  .list-items {
+    margin: 1rem;
+  }
+
+  ul li a {
+    color: mintcream;
+    font-weight: 300;
+    font-size: 1.8rem;
+    font-family: "Aldrich", sans-serif;
+    position: relative;
+  }
+  ul li a::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #eb648c;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 650ms;
+  }
+
+  ul li a.current::before {
+    transform: scaleX(1);
+  }
+
+  ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+@media screen and (min-width: 940px) {
+  .hero::before {
+    width: 100%;
+    height: 22.7rem;
+    background: url(wave-large.png) center no-repeat;
+    background-size: cover;
+  }
+  .description::before {
+    width: 100%;
+    height: 22.7rem;
+    background: url(wave-large-reversed.png) center no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 940px) {
+  .hero {
+    width: 100%;
+    height: 100vh;
+  }
+  .comment {
+    top: 60%;
+  }
+}
